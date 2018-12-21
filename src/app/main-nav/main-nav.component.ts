@@ -9,9 +9,14 @@ import { ToastService } from '../toast/toast.service';
 })
 export class MainNavComponent implements OnInit {
 
+
   constructor(private router: Router, private toastService: ToastService) { }
 
   ngOnInit() {
+  }
+
+  showToast() {
+    this.toastService.showToast('success', 3000, 'This application was created by Jonathan Zepeda. (C) 2018');
   }
 
 }
