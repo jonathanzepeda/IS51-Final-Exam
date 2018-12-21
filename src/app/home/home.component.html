@@ -10,11 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let order of orders; let i = index">
+        <td><img class="item-image" [src]="order.image" alt="img"></td>
+        <td><input type="text" [(ngModel)]="order.id" class="form-control" placeholder="ID"></td>
+        <td><input type="text" [(ngModel)]="order.description" class="form-control" placeholder="Description"></td>
+        <td><input type="text" [(ngModel)]="order.price" class="form-control" placeholder="Price"></td>
+        <td><input type="text" [(ngModel)]="order.quantity" class="form-control" placeholder="Quantity"></td>
       </tr>
     </tbody>
   </table>

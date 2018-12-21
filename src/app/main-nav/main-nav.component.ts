@@ -8,10 +8,16 @@ import { ToastService } from '../toast/toast.service';
   styleUrls: ['./main-nav.component.css']
 })
 export class MainNavComponent implements OnInit {
+  aboutText: string;
 
   constructor(private router: Router, private toastService: ToastService) { }
 
   ngOnInit() {
+  }
+
+  showAbout() {
+    this.aboutText = 'This application is designed by Jonathan Zepeda. (C) 2018';
+
   }
 
 }
